@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>월화수목금토일</h3>
+        <hr>
+        <div id="result"></div>
+        <script>
+            var result = document.getElementById("result");
+            var day = new Array("월", "화", "수", "목");
+            var input = prompt('월화수목금토일 중에서 입력하세요');
+            if (day.indexOf(input) == -1) {
+                result.innerHTML = "휴일";
+            } else {
+                result.innerHTML = "출근";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>셀렉터</title>
+        <style>
+            h3, strong, em {
+                color: green;
+            }
+            div strong {
+                color: red;
+            }
+            div > strong {
+                color: blue;
+            }
+            #center {
+                text-align: center;
+            }
+            .right {
+                text-align: right;
+            }
+            .indednt {
+                text-indent: 3em;
+            }
+            body.main {
+                background-color : powderblue;
+            }
+            #center strong {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body class="main">
+        <h3>요즘 재미있게 보고있는 것</h3>
+        <hr>
+        <div id="center"><strong>슬기로운 의사생활</strong></div>
+        <div class="indednt">
+            <p><em>신원호</em>감독의 슬기로운 감빵생활에 이은 후속작
+            <strong>99학번 의사 동기</strong> 5인방의 일상생활을 담음
+            <strong>꿀 잼</strong> 입니다</p>
+        </div>
+    </body>
+</html>

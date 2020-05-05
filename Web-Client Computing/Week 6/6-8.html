@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>eval()로 수식 계산</h3>
+        <hr>
+        <div id="result"></div>
+        <script>
+            var result = document.getElementById("result");
+            var input = prompt('수식 입력');
+            result.innerHTML = input + " = " + eval(input);
+        </script>
+    </body>
+</html>
