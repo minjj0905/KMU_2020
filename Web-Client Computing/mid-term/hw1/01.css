@@ -1,0 +1,32 @@
+@font-face { font-family: 'silgothic'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BBTreeGB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGB.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+div#mainbox {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    left: 25%;
+    top: 35%;
+    text-align: center;
+    font-weight: 500;
+    align-items: center;
+    font-family: 'silgothic';
+    font-size: 20px;
+    color: white;
+    border-radius: 5px / 5px;
+    background-color: lightcoral;
+}
+
+span#result {
+    font-size: 50px;
+    font-weight: normal;
+    font-family: 'BBTreeGB';
+}
+
+table#table {
+    width: 60%;
+    height: 50%;
+    margin-left: 25%;
+    position: absolute;
+    text-align: left;
+}
