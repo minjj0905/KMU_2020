@@ -9,7 +9,7 @@ class Kvector {
     int len;
 public:
     static int total_len;
-    Kvector(int sz = 0, int value = 0): len(sz){};
+    Kvector(int sz = 0, int value = 0);
     Kvector(const Kvector& v);
     ~Kvector() {
         cout << this << " : ~Kvector() \n";
@@ -79,7 +79,7 @@ int& Kvector::operator[](int idx){
 
 int Kvector::total_len = 0;
 
-Kvector::Kvector(int sz, int value) {
+Kvector::Kvector(int sz, int value) : len(sz) {
     if(sz==0) clear();
     else {
         total_len += sz;
