@@ -50,8 +50,9 @@ class MinHeap <T extends Comparable> {
 	}
 
 	void PostOrder (final int idx) { 
-		if(idx*2 <= heapSize) PostOrder(idx*2);
-		if(idx*2+1 <= heapSize) PostOrder(idx*2 +1);
+		if(idx > heapSize) return;
+		PostOrder(idx*2);
+		PostOrder(idx*2 +1);
 		System.out.print(heapArray[idx] + " ");
 	}
 

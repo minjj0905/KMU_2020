@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>오전이면 lightskyblue, 오후이면 orange 배경</h3>
+        <hr>
+        <script>
+            var today = new Date();
+            today.setHours(11);
+            if(today.getHours() < 12){
+                document.body.style.background = "lightskyblue";
+            }else {
+                document.body.style.background = "orange";
+            }
+            document.write("현재 시간 : " + today.toLocaleTimeString())
+        </script>
+    </body>
+</html>
