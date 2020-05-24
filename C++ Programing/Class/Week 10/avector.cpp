@@ -100,7 +100,7 @@ public:
     }
 
     void setTable(const char *t){
-        for(int i=0; i<3; i++){
+        for(int i=0; i<N; i++){
             table[i] = t[i];
         }
     }
@@ -110,14 +110,14 @@ public:
 
 ostream& operator<<(ostream& os, const Avector& v){
     for(int i=0; i<v.len; i++) {
-        os << v.table[v.m[i]%3] << " ";
+        os << v.table[v.m[i]%N] << " ";
     }
     return os;
 }
 
 int main(int argc, char *argv[]) {
     if(argc != 2) {
-        cout << "usage : ./avector pqr\n";
+        cout << "usage : ./avector pqr\n";1
         return 1;
     }
 
