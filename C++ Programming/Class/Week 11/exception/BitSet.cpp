@@ -9,17 +9,12 @@ void BitSet::insert(int v) {
     }
 
 BitSet operator+(const BitSet& v1, const BitSet& v2) {
-    try {
-        if(v1.NBITS != v2.NBITS) throw IncompatibleException(v1.NBITS, v2.NBITS);
-        BitSet r(v1.NBITS);
-        for(int i=0; i<r.len; i++) {
-            r.u_m[i] = v1.u_m[i] | v2.u_m[i];
-        }
-        return r;
+    if(v1.NBITS != v2.NBITS) throw IncompatibleException(v1.NBITS, v2.NBITS);
+    BitSet r(v1.NBITS);
+    for(int i=0; i<r.len; i++) {
+        r.u_m[i] = v1.u_m[i] | v2.u_m[i];
     }
-    catch(...){
-        throw;
-    }
+    return r;
 }
 
 ostream& operator<<(ostream& os, const BitSet& s){
