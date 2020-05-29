@@ -117,7 +117,7 @@ ostream& operator<<(ostream& os, const Avector& v){
 
 int main(int argc, char *argv[]) {
     if(argc != 2) {
-        cout << "usage : ./avector pqr\n";1
+        cout << "usage : ./avector pqr\n";
         return 1;
     }
 
