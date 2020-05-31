@@ -6,10 +6,10 @@
 
 ## 2020년 수강한 과목들
 - ### 1학기
-    - C++프로그래밍 (임은진 교수님)
-    - 자료구조 (이상환 교수님)
-    - 수치해석 (김상철 교수님)
-    - 웹클라이언트컴퓨팅 (진혜진 교수님)
+    - [C++프로그래밍 (임은진 교수님)](https://github.com/minjj0905/KMU_2020/tree/master/C%2B%2B%20Programming)
+    - [자료구조 (이상환 교수님)](https://github.com/minjj0905/KMU_2020/tree/master/Data%20Structure)
+    - [수치해석 (김상철 교수님)](https://github.com/minjj0905/KMU_2020/tree/master/Numerical%20analysis)
+    - [웹클라이언트컴퓨팅 (진혜진 교수님)](https://github.com/minjj0905/KMU_2020/tree/master/Web-Client%20Computing)
     - 논리회로설계 (주용수 교수님)
     - 사제동행세미나 (김준호 교수님)
     - 한국역사의이해 (여성구 교수님)
