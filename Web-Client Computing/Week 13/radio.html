@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>라디오버튼</title>
+    </head>
+    <script>
+        function changeImg(s) {
+            var img = document.querySelector("#img");
+            img.src = s + ".jpg";
+        }
+    </script>
+    <body>
+        <h3>선택된 라디오 버튼의 이미지 보여주기</h3>
+        <hr>
+        <form>
+            <input type="radio" name = "season" value="spring" onclick="changeImg(this.value)">봄
+            <input type="radio" name = "season" value="summer" onclick="changeImg(this.value)" checked>여름
+            <input type="radio" name = "season" value="fall" onclick="changeImg(this.value)">가을
+            <input type="radio" name = "season" value="winter" onclick="changeImg(this.value)">겨울
+        </form>
+        <img id="img" src="summer.jpg">
+    </body>
+</html>
