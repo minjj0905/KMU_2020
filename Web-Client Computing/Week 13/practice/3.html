@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>계산기 만들기</title>
+    </head>
+    <style>
+        @font-face { font-family: 'NEXON Lv1 Gothic OTF Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff'); font-weight: normal; font-style: normal; }
+        html {
+            font-family: NEXON Lv1 Gothic OTF Light;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function calculate(event) {
+            if(event.keyCode == 13) {
+                var exp = document.getElementById("exp");
+                var val = document.getElementById("val");
+                val.value = eval(exp.value);
+            }
+        }
+    </script>
+    <body>
+        <h3>계산기 만들기</h3>
+        <hr>
+        수식을 입력하고 &lt;Enter&gt;를 입력하세요.
+        <br>
+        <br>
+        <form>
+            식 <input type="text" id="exp" onkeydown="calculate(event)"><br>
+            값 <input type="text" id="val" readonly>
+        </form>
+    </body>
+</html>

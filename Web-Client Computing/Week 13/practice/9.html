@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onmouseover</title>
+    </head>
+    <style>
+        @font-face { font-family: 'NEXON Lv1 Gothic OTF Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff'); font-weight: normal; font-style: normal; }
+        html {
+            font-family: NEXON Lv1 Gothic OTF Light;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        var text = ["빨간자전거 ...",
+                    "책 많이...",
+                    "운동...",
+                    "공부..."];
+
+        var div;
+        function init() {
+            div = document.getElementById("div");
+            var liarr = document.getElementsByTagName("li");
+            for(var i=0; i<liarr.length; i++) {
+                liarr[i].onmouseover=over;
+                liarr[i].onmouseout=out;
+            }
+        }
+
+        function over(e) {
+            var i = e.target.id;
+            div.innerHTML = text[i];
+            div.style.visibility = "visible"
+            div.style.border = "2px solid gray";
+            div.style.left = e.x + "px";
+            div.style.top = e.y + "px";
+            div.style.width = "auto";
+            div.style.height = "auto";
+            div.style.backgroundColor = "aliceblue";
+            div.style.color = "black";
+            div.style.fontWeight = "bold";
+            div.style.fontSize = "20px"
+            }
+
+        function out() {
+            div.style.visibility = "hidden";
+        }
+
+    </script>
+    <body onload="init()">
+        <h3>아이템에 마우스를 올리면 설명 출력</h3>
+        <hr>
+        여름 방학 때 하고 싶은 것들
+        <ul>
+            <li id="0">자전거로 대한민국 일주</li>
+            <li id="1">책 100권 읽기</li>
+            <li id="2">철인 3종 경기 준비</li>
+            <li id="3">자바스크립트 정복</li>
+        </ul>
+        <div id="div" style="position: absolute;"></div>
+    </body>
+</html>
