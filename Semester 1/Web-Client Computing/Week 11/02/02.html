@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>피자조아</title>
+    </head>
+    <script>
+        function sum_total() {
+            var sum = 24000;
+            var checked = document.f.menu;
+            for(var i=0; i<checked.length; i++) {
+                if(checked[i].checked == true) {
+                    sum += parseInt(checked[i].value);
+                }
+            }
+            var price = document.getElementById("total");
+            price.innerHTML = "<strong>" + sum + "원" + "</strong>";
+        }
+    </script>
+    <body>
+        <div>
+            <h1>피자 주문</h3>
+                <fieldset>
+                    <legend>사이즈</legend>
+                    <label class="field" for="pizza">Large - 24000 원</label>
+                </fieldset>
+                <br>
+
+                <fieldset>
+                    <legend>추가 주문</legend>
+                        <form name="f">
+                            <input type='checkbox' name="menu" value="800" onclick="sum_total()">피클(800원)
+                            <input type='checkbox' name="menu" value="300" onclick="sum_total()">칠리소스(300원)
+                            <input type='checkbox' name="menu" value="200" onclick="sum_total()">디핑소스(200원)
+                            <input type='checkbox' name="menu" value="4800" onclick="sum_total()">치즈스틱(4개, 4800원)
+                            <input type='checkbox' name="menu" value="2400" onclick="sum_total()">콘 샐러드(2400원)
+                        </form>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>합계</legend>
+                    <label for="money" id="total"></label>
+                </fieldset>
+        </div>
+        <script>
+            var price = document.getElementById("total");
+            price.innerHTML = "<strong>24000원</strong>";
+        </script>
+    </body>
+</html>

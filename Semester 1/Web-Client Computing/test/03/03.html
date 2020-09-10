@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이미지 휠</title>
+        <script>
+            function wheel(e, img) 
+            { 
+              if(e.wheelDelta > 0) 
+                { 
+                    img.width -= img.width*0.05; 
+                  img.height -= img.height*0.05;
+              }
+                else 
+                { 
+                  img.width += img.width*0.05; 
+                  img.height += img.height*0.05;
+              }
+            }
+        </script>
+        <style>
+            @font-face { font-family: 'NEXON Lv2 Gothic Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+            html {
+                font-family: 'NEXON Lv2 Gothic Bold';
+                font-size: 20px;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 40px;
+                color: darkcyan;
+            }
+        </style>    
+    </head>
+    <body>
+        <h3>휠을 굴려보세요</h3>
+        <hr>
+        이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.
+        <br>
+        <br>
+        <br>
+        <img src="dog.png" id="picture" width="300px" height="350px" onwheel="wheel(event, this)">
+    </body>
+</html>

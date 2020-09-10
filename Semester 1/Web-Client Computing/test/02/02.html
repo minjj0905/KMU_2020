@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>테스트</title>
+        <link rel="stylesheet" href="02.css" type="text/css">
+        <script src="02.js"></script>
+    </head>
+    <body>
+        <h3>숫자 맞히기 게임</h3>
+        <hr>
+        <br>
+        1에서 45 사이의 수를 입력하세요.
+        <br>
+        <br>
+        <input type="text" id="in" onkeydown="get_enter()"> 
+        <input type="button" id = "submit" value="확인" onclick="get_answer()">
+        <input type="button" id = "re" value="다시" onclick="reset()">
+        <br>
+        <br>
+        <div id="result"></div>
+        <br>
+        <br>
+        <p id="num" class="cnt"></p>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>슬라이드</title>
+    </head>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        button {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div id="inside">
+                <img src="cat.png">
+                <img src="dog.png">
+                <img src="cat2.png">
+                <img src="dog2.png">
+                <br>
+            </div>
+        </div>
+        <button id="prev" onclick="prevslide()">&lang;</button>
+        <button id="next" onclick="nextslide()">&rang;</button>
+    </body>
+    <script>
+        var slide = document.querySelectorAll("#inside > img");
+        var prev = document.querySelector("#prev");
+        var next = document.querySelector("#next");
+
+        var index = 0;
+
+        function show(n) {
+            for(var i=0; i<slide.length; i++) {
+                slide[i].style.display = "none";
+            }
+            slide[n].style.display = "block";
+        }
+
+        function prevslide() {
+            if(index > 0) index -= 1;
+            else index = slide.length -1;
+            show(index);
+        }
+
+        function nextslide() {
+            if(index < slide.length - 1) index += 1;
+            else index = 0;
+            show(index);
+        }
+
+        show(index);
+    </script>
+</html>

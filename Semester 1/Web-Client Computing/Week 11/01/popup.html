@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>현재 시각은?</title>
+        <script>
+            function getTime() {
+                var today = new Date();
+                var result = document.getElementById("time");
+                if(today.getHours() <= 12) {
+                    result.innerHTML = "오전 " + zero(today.getHours()) + ":" + zero(today.getMinutes()) + ":" + zero(today.getSeconds());
+                }else {
+                    result.innerHTML = "오후 " + zero(today.getHours()%12) + ":" + zero(today.getMinutes()) + ":" + zero(today.getSeconds());
+                }
+                setTimeout(getTime,1000);
+            }
+            function zero(n) {
+                if(n<10) n = "0" + n;
+                return n;
+            }
+        </script>
+        <style>
+            @font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; }
+            #time {
+                font-family: Recipekorea;
+                font-size: 50px;
+                color: darkgray;
+                text-align: center;
+                padding-top: 10%;
+            }
+        </style>
+    </head>
+    <body onload="getTime()">
+        <div id="time"></div>
+    </body>
+</html> 
